@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contenido Embebido</h1>
+    <!--
+
+        <img src="/contenido-embebido/assets/images/Button---Share.svg" alt="Perro confundido">
+        
+        <!--<img src="/contenido-embebido/assets/images/perro.webp" width="300" alt="Logo">
+        
+        <img srcset="
+        /contenido-embebido/assets/images/perro.webp, 
+        /contenido-embebido/assets/images/perro-perrete.gif 3x" alt="">
+        
+    -->
+    <article>
+        <header>
+            <h1>Etiqueta Picture</h1>
+        </header>
+        <picture>
+           <!--<source srcset="/contenido-embebido/assets/images/perro.webp, /contenido-embebido/assets/images/perro-perrete.gif">-->
+           <source srcset="/contenido-embebido/assets/images/perro.webp" media="(min-width: 640px)">
+            <img src="/contenido-embebido/assets/images/Button---Share.svg" alt="">
+        </picture>
+    </article>
+
+    <article>
+        <header>
+            <h1>Etiqueta audio</h1>
+        </header>
+        <audio src="/contenido-embebido/assets/audio/audio.mp3" controls></audio>
+    </article>
+
+    <article>
+        <header>
+            <h1>Etiqueta video</h1>
+        </header>
+        <video src="/contenido-embebido/assets/video/video.mp4" controls></video>
+    </article>
+
+    <article>
+        <header>
+            <h1>Figure</h1>
+        </header>
+        <figcaption>gif de perro</figcaption>
+        <figure>
+            <img src="/contenido-embebido/assets/images/perro-perrete.gif" alt="">
+        </figure>
+    </article>
+</body>
+</html>

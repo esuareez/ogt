@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <section>
+        <h1>Formularios</h1>
+        <form >
+            <label for="name">Nombre</label>
+            <input type="text" id="name">
+            <button>Enviar</button>
+        </form>
+    </section>
+
+    <article>
+        <header>
+            <h1>Input vs button: submit</h1>
+        </header>
+        <form>
+            <input>
+            <input type="submit" value="Enviar">
+            <button>Enviar</button>
+        </form>
+    </article>
+
+    <article>
+        <header>
+            <h1>Inputs de tipo fecha</h1>
+        </header>
+        <form>
+            <label>Tipo date</label>
+            <input type="date">
+            <br>
+            <label>Tipo datetime-local</label>
+            <input type="datetime-local">
+            <br>
+            <label>Tipo month y week</label>
+            <input type="month">
+            <input type="week">
+        </form>
+    </article>
+
+    <article>
+        <header>
+            <h1>Tipos de inputs para moviles</h1>
+            <form>
+                <div>
+                    <label>Tipo search</label>
+                    <input type="search">
+                </div>
+                <div>
+
+                    <label>Tipo tel</label>
+                    <input type="tel">
+                </div>
+                <div>
+
+                    <label>Tipo password</label>
+                    <input type="password">
+                </div>
+                <div>
+                    
+                    <label>Tipo url</label>
+                    <input type="url">
+                </div>
+                <div>
+                    
+                    <label>Tipo email</label>
+                    <input type="email">
+                </div>
+                
+            </form>
+        </header>
+    </article>
+
+    <article>
+        <header>
+            <h1>Otros tipos de inputs</h1>
+        </header>
+    <form>
+        <div>
+            <label>Tipo color</label>
+            <input type="color">
+        </div>
+        <div>
+            <label>Tipo number</label>
+            <input type="number">
+        </div>
+        <div>
+            <label>Tipo range</label>
+            <input type="range" min="0" max="100" step="2">
+        </div>
+        <div>
+            <label>Tipo reset</label>
+            <input type="reset">
+        </div>
+        <div>
+            <label>Tipo text</label>
+            <input type="text">
+        </div>
+    </form>
+</article>
+
+<article>
+    <header>
+        <h1>Input de seleccion: checkbox</h1>
+    </header>
+    <form>
+        <div>
+            <label id="radio1">Tipo radio</label>
+            <input type="radio" name="radio" value="radio1" id="radio1">
+        </div>
+        <div>
+            <label id="radio2">Tipo radio</label>
+            <input type="radio" name="radio" value="radio2" id="radio2" checked>
+        </div>
+        <div>
+            <label id="radio3">Tipo radio</label>
+            <input type="radio" name="radio" value="radio3" id="radio3">
+        </div>
+    </form>
+</article>
+
+<article>
+    <header>
+        <h1>Input de seleccion: select</h1>
+    </header>
+    <form>
+        <div>
+            <label>Lenguajes</label>
+            <!--Para seleccionafr mas de uni, se usa MULTIPLE-->
+
+            <!--
+                Si tenemos muchas opciones se puede usar optgroup y con el atributo label se nombra la categoria.
+            -->
+            <select name="lenguajes" id="lenguajes">
+                <optgroup label="Lenguajes">
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="js">JavaScript</option>
+                </optgroup>
+                <optgroup label="Frameworks">
+                    <option value="react">React</option>
+                    <option value="angular">Angular</option>
+                </optgroup>
+            </select>
+        </div>
+    </form>
+</article>
+
+<article>
+    <header>
+        <h1>Datalist</h1>
+    </header>
+    <form>
+        <input type="list" list="leng">
+        <datalist id="leng">
+            <option value="html">HTML</option>
+            <option value="js">JavaScript</option>
+        </datalist>
+    </form>
+</article>
+
+</body>
+</html>

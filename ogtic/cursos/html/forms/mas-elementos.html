@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <article>
+        <header>
+            <h1>Fieldset</h1>
+        </header>
+        <form>
+            <fieldset>
+                <legend>Datos personales</legend>
+                <div>
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name" placeholder="Nombre">
+                </div>
+                <div>
+                    <label for="surname">Apellido</label> 
+                    <input type="text" id="surname" name="surname" placeholder="Apellido">
+                </div>
+            </fieldset>
+        </form>
+    </article>
+
+    <article>
+        <header>
+            <h1>File</h1>
+        </header>
+        <input type="file">
+    </article>
+
+    <article>
+        <header>
+            <h1>Meter</h1>
+        </header>
+        <label for="fuel">Combustible</label>
+        <meter id="fuel" min="0" max="100" low="25" high="80" value="20" optimum="55"></meter>
+    </article>
+
+    <article>
+        <header>
+            <h1>Task</h1>
+        </header>
+        <label for="task">Tarea</label>
+        <progress id="task" max="100" value="20"></progress>
+    </article>
+
+    <article>
+        <header>
+            <h1>Textarea</h1>
+        </header>
+        <label for="mess"></label>
+        <textarea name="" id="mess" cols="50" rows="5"></textarea>
+    </article>
+</body>
+</html>

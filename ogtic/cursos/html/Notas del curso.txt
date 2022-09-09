@@ -1,0 +1,279 @@
+IP: identificador numerico de una pagina web, es unico y representa la direccion
+donde esta el ordenador que contiene esa pagina web.
+
+Dominio/URL: nombre asociado a la IP que utilizamos para solicitar recursos.
+
+DNS: es un servidor cuya principal funcion es traducir el nombre de dominio a su IP.
+
+Sitio web: conjunto de 1 o varios sitios web.
+
+Servidor web: ordenador cuyo objetivo es servir recursos web.
+
+Hosting: Almacenamiento del servidor web.
+
+Peticion: accion de pedir recursos a un servidor web.
+
+---------------------------------------------------------------------------------------------
+
+HTML es un lenguaje de estructura. Es la base con la que estan creadas TODAS las
+paginas webs del mundo.
+
+Cada etiqueta le dice al navegador y a los motores de busqueda cual es la estructura 
+de los documentos, elementos, etc.
+
+--------------------------------------------------------------------------------------------
+
+section: contenedor generico que agrupa contenido que esta relacionado.
+
+article: contenedor que representwa contenido independiente.
+
+aside: se utiliza para representar contenido relacionado pero que no forma parte del contenido.
+
+--------------------------------------------------------------------------------------------
+
+Atributos. Son valores adicionales que configuran los elementos y/o ajustan su comportamiento.
+
+Hay dos tipos de atributos:
+
+    - Comunes: su sintaxis es -> atributo="valor"
+    - Booleano: su sintaxis es -> atributo
+
+Algunos atributos globales.
+
+class. Este atributo se utiliza para dar estilo a traves de CSS.
+
+id. Identificador unico que se utiliza para seleccionar el elemento desde JS y para navegar entre anclas.
+
+title. Es un atributo que ayuda a la accesibilidad mostrando una descripcion del elemento al que pertenece. Aparece el mensaje en un tooltip. (cuadrito cuando sombreas algo y presenta un texto).
+
+data-*. Es un atributo que nos permite guardar algun valor en la etiqueta HTML.
+
+--------------------------------------------------------------------------------------------
+
+Rutas absolutas: 
+    Tienen un protocolo, http o https y son unicas en la red. Se suelen utilizar para rutas externas.
+
+Rutas relativas:
+    Pueden ser relativas al punto donde nos encontramos o relativas a la raiz del proyecto.
+
+    No usan protocolo.
+
+    Si el recurso se encuentra al mismo nivel (en la misma carpeta) pondremos unicamente el nombre del archivo.
+
+    Si necesitamos salir de la carpeta actual usaremos ../ y se pone uno por cada nivel (carpeta) de la que queramos salir.
+
+** Atributos de los enlaces
+
+    target: define donde se abrira el recurso solicitado. "_blank" abre una nueva pestaña. _self se abre en la misma ventana, pero esta por default.
+
+    download: para descargar se indica download. Es tipo booleana, para poder descargar algun archivo debe ser propio del proyecto.
+
+--------------------------------------------------------------------------------------------
+
+Listas. Sirven para listar contenido. En funcion del tipo de contenido de nuestra lista tenemos tres tipos de listas:
+
+ul. Unordered list: se utilizan cuando el orden de los elementos no influye.
+
+ol. Ordered list: se utilizan cuando el orden de los elementos es importante.
+
+Cada elemento de la lista se representa por <li>. Solo sirve para ul y ol
+
+dl. Definition list: se utilizan para hacer una lista de definiciones.
+
+Cada elemento de una lista de definicion lleva 2 etiquetas:
+    dt - definition term. El termino que vamos a definir.
+    dd - definition description. Descripcion del termino.
+
+** Atributo de la lista. 
+
+ol
+    type: estilo de numeracion (1, A, a, I, i)
+    start: inicio de las secuencia (un numero)
+
+ul
+    type: estilo de los items (disc, square, circle)
+
+--------------------------------------------------------------------------------------------
+
+Tablas 
+
+Sirven para mostrar contenido tabulado.
+
+La estructura basica de una tabla se compone de:
+    table: etiqueta que encierra una tabla.
+    tr: table row, etiqueta que construye una fila.
+    td: tabla data, etiqueta que construye una celda.
+
+Cuando se utiliza <thead>, la etiqueta para la data seria <th> en vez de <td>.
+
+Para hacer que las celdas ocupen mas de una fila o mas de una columna tenemos dos atributos:
+    rowspan: empieza en 1 y ocuparia mas de una fila.
+
+    colspan: empieza en 1 y ocupa mas de una columna.
+
+Cuando se necesita seleccionar una columna, tenemos la etiqueta colgroup, que permite seleccionar una columna en concreto. 
+
+En caso de agrupar mas de una columna, tenemos el atributo span, que funciona igual que rowspan y colspan.
+
+--------------------------------------------------------------------------------------------
+
+Otros elementos de bloque
+
+address -> se utiliza para aportar informacion de contacto para el article mas cercano o para todo el body.
+
+blockquote -> se utiliza para marcar las citas a otros autores o documentos. Se puede incluir el atributo "cite" para poner un enlace al documento original o fuente.
+
+pre -> se utiliza para tener codigo preformateado que necesita ser representado igual que se escribio.
+
+div -> se usa como division del documento, semanticamente no significa nada, es un contenedor generico que se usa generalmente para dar estilos a traves de css o para usar algo denominado "delegacion de eventos" en javascript.
+
+hr -> horizontal rule, se utiliza para decirle al navegador que vamos a cambiar de tema.
+
+--------------------------------------------------------------------------------------------
+
+Otras etiquetas de linea
+
+span -> es un contenedor de linea, equivale a div, se suele usar para encerrar palabras o textos pequeños y darles estilo a traves de CSS o localizarlos desde javascript. Semanticamente no significa nada.
+
+q -> es el equivalente a blockquote, significa quote, por eso el de bloque se llama block - quote. Sirve para poner citas, pero en linea.
+
+code -> sirve para encerrar codigo que queremos representar visualmente, suele ir unido con la etiqueta pre.
+
+--------------------------------------------------------------------------------------------
+
+Formularios.
+
+La estructura se compone de 4 elementos.
+
+form -> es la etiqueta que engloba nuestro formulario.
+
+label -> sirve para escribir el nombre del campo a rellenar. Debe tener el atributo for al cual se le indica un id que lo emparejara sera el label con su input correspondiente.
+
+input -> sirve para crear un campo que permitira al ususario interactuar.El unico atributo del input es name.
+
+button -> crea un boton que permitira enviar el formulario.
+
+**Tipos de input
+
+    button: -> se comporta igual que un boton <button>
+    
+    color: -> se utiliza para especificar un color.
+
+    date: -> se utiliza para introducir una fecha
+
+    datetime -> OBSOLETO.
+
+    datetime-local -> fecha y hora, no funciona en firefox.
+
+    email -> se utiliza para introducir un email.
+
+    hidden -> campo oculto, puede contener valor pero no se mostrara.
+
+    month -> se utiliza para introducir un mes.
+
+    number -> se utiliza para valores numericos.
+
+    password -> se utiliza para contraseñas.
+
+    range -> se utiliza para establecer un rango
+
+    reset -> se utiliza para resetear el formulario.
+
+    search -> se utiliza para las barras de busqueda.
+
+    submit -> se utiliza para enviar el formulario.
+
+    tel -> se utiliza para introducir numeros telefonicos.
+
+    text -> valor por defecto.
+
+    time -> se utiliza para introducir una hora.
+
+    url -> se utiliza para introducir URLs.
+
+    week -> se utiliza para introducir el numero de semanas del año.
+
+    Para enviar un formulario se debe usar un button, en el caso que se requiera una funcion con javascript se utiliza un input de tipo button. En caso del input ser tipo submit, si se envia.
+
+--------------------------------------------------------------------------------------------
+
+Mas elementos para los formularios.
+
+    fieldset -> se utiliza para agrupar elementos dentro de un formulario.
+
+    legend -> representa una etiqueta para el contenido del fieldset.
+
+    file -> este input se utiliza para cargar archivos y enviarlos desde un formulario.
+
+    meter -> representa un valor dentro de un rango conocido.
+
+    progress -> representa el progreso de una tarea.
+
+    textarea -> se utiliza para introducir texto en un formulario.
+
+--------------------------------------------------------------------------------------------
+
+Atributos formulario
+
+    placeholder -> da una pista de que se debe introducir.
+    required -> hace que el campo sea obligatorio.
+    readonly -> hace que el campo sea de lectura.
+    min - max -> establece un minimo o un maximo de un campo numerico.
+    maslenght - minlenght -> establece el minimo y maximo de caracteres de un campo de texto.
+    selected -> equivale a un checked en los select, sirve para establecer una opcion por defecto.
+    autofocus -> pone el foco por defecto al cargar la pagina.
+
+--------------------------------------------------------------------------------------------
+
+Contenido Embebido
+
+Es todo el contenido que se trae de fuera. Estos archivos son los que mas peso añaden a un sitio web. Ejemplo:
+
+    Imagenes
+    Audios
+    Videos
+    Iframe
+
+** Imagenes.
+
+Se clasifican en 2 tipos:
+
+    Vectoriales:
+        *svg
+    
+    Mapa de bits:
+        *jpg
+        *png 8 y 24
+        *gif
+        *webp
+
+
+--------------------------------------------------------------------------------------------
+
+Device Pixel Ratio
+    Es la relacion que existe entre los pixeles reales que tiene el dispositivo y los pixeles que tenemos disponibles para "pintar" contenido.
+
+    DRP = pixeles reales / pixeles disponibles
+
+--------------------------------------------------------------------------------------------
+
+En el caso del contenido embebido, mas en concreto el audio. Para que funcione necesita el atributo booleano "controls", tambien esta autoplay, muted.
+
+Para usar autoplay en una pagina web publicada se debe usar muted para que funcione.
+
+Loop que sirve para repetir el audio o video.
+
+En el caso de los videos, hay un atributo para las miniaturas, las cuales son: "poster"
+
+Etiqueta figure.
+    Sirve para agregar una imagen, por ejemplo en un articulo. 
+
+Esta la etiqueta figcaption, que sirve para ponerle un caption a la imagen
+
+--------------------------------------------------------------------------------------------
+
+Etiquetas meta
+
+meta description. Sirve para que salga lo que quiera que aparezca en la descripcion del sitio web.
+
+meta author. Sirve 
