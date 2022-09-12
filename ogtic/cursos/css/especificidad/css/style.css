@@ -1,0 +1,14 @@
+.title#t1{
+    background-color: tomato;
+}
+
+.title{
+    background-color: lightsalmon;
+}
+
+section > p{
+    background-color: red;
+}
+p span{
+    color: yellow;
+}

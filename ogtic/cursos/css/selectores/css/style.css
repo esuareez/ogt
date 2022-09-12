@@ -1,0 +1,42 @@
+/* *{
+    background-color: aqua;
+}
+
+h1{
+    background-color: beige;
+}
+
+p{
+    background-color: antiquewhite;
+}  */
+
+#title{
+    background-color: lightcoral;
+}
+
+.title{
+    background-color: lightcyan;
+}
+
+[href]{
+    background-color: lightgoldenrodyellow;
+}
+
+[href="https://www.youtube.com/"]{
+    background-color: red;
+}
+
+[href^="color"]{
+    background-color: blueviolet;
+}
+
+[href*="rojo"]{
+    background-color: lightblue;
+}
+[href$="azul"]{
+    background-color: lightseagreen;
+}
+
+[lang|="en"]{
+    background-color: magenta;
+}

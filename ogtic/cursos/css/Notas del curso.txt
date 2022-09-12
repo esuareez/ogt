@@ -1,0 +1,58 @@
+** Sintaxis de CSS
+
+Selector: elemento al que vamos a aplicar estilos.
+Propiedad: lo que vamos a cambiar.
+Valor: nuevo valor que le vamos a dar a la propiedad.
+Propuedad: valor. Se le denomina declaracion al conjunto de selector + declaracion(es) se le denomina regla.
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+ ** Selectores
+
+    Selectores simples:
+        Selectores elementales:
+            Selector universal -> *
+            Selector de tipo o etiqueta -> nombre de la etiqueta.
+
+        Selectores de atributo.
+            id -> id del elemento. (# para los id).
+            clase -> clase del elemento. (Para seleccionar clase es .nombredelaclase)
+            otros atributos. Para los atributos seria con corchetes []
+            [atributo] -> un atributo.
+            [atributo = valor] -> elementos que tengan ese valor.
+            [atributo^=valor] -> elementos que empiezan con ese valor.
+            [atributo*=valor] -> elementos que tengan el valor, sin importar el orden.
+            [atributo$=valor] -> elementos que terminan con ese valor.
+            [atributo|=valor] 
+    
+    Selectores compuestos
+        Selectores agrupados.
+            Se agrupan los selectores separados por comas y se escribe el estilo una sola vez.
+
+        Selectores combinadores.
+            Selector descendiente. 
+            Selector de hermanos siguientes (+). -> Son los elementos que estan en el mismo nivel.
+            Selector de hermanos siguientes. ~
+
+            Para seleccionar un hijo directo se pone:
+
+            .nombredelaclase > nombredelaetiqueta/clase/id.
+
+        Pseudoclases - pseudoelementos.
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+** Especificidad
+
+    Establece como de especifico es un selector ara saber que estilo aplicar. 
+    El calculo se realiza con la siguiente formula:
+        Etiquetas y pseudoelementos 001
+        Clases, atributos y pseudoclases 010
+        Ids 100
+        Estilos en linea 1000
+        !important GANA A TODO Y NO SE USA.
+
+    Cascada -> Funciona siempre que la especificidad sobre el elemento sea la misma.
+
+    Herencia -> es la capacidad que tienen algunos elementos de heredar algunas propiedades de sus elementos conetenedores (padre, abuelos, etc).
