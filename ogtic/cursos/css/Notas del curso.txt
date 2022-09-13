@@ -56,3 +56,134 @@ Propuedad: valor. Se le denomina declaracion al conjunto de selector + declaraci
     Cascada -> Funciona siempre que la especificidad sobre el elemento sea la misma.
 
     Herencia -> es la capacidad que tienen algunos elementos de heredar algunas propiedades de sus elementos conetenedores (padre, abuelos, etc).
+
+    La palabra "inherit" sirve para forzar a esos elementos que no se puedan heredar, pero queramos que hereden en un caso especifico. Como en el caso de los links.
+
+    Para ignorar los cambios, en la herencia, se utiliza "initial". Asi lo ignora y permanece con su valor inicial.
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+Prefijos propietarios
+
+Autoprefixer ( autoprefixer.github.io )
+    Sirve para los prefijos de los navegadores que no soportan un estandar.
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+Medidas. 
+
+* Width, Height
+
+*** Los elementos en linea no tienen medida. No sirve usar width o height.
+
+*** Solo se le puede dar medida a los elementos de bloque.
+
+* Margin:
+    Es la propiedad que nos permite generar espacio entre elementos.
+    Es un shorthand (propiedad abreviada) que controla los 4 lados posibles a los que dar margenes.
+
+    * margin-top: margen superior
+    * margin-right: margen derecho
+    * margin-bottom: margen inferior
+    * margin-left: margen izquierdo
+
+    Admite hasta 4 valores que van en el orden de las agujas del reloj.
+
+    4 valores -> margin:top right bottom left
+    3 valores -> margin:top left/right bottom
+    2 valores -> margin:top left/right
+    1 valor -> margin:top/right/bottom/left
+
+En el caso de los elementos de linea, solo tienen disponible solo los margenes horizontales (left/right). Los de bloque tienen los 4 disponibles.
+
+Para los elementos de bloque, en caso que se quiera utilizar el valor "auto" en los margin, se debe declarar el tamaño del bloque, para que surta efecto.
+
+Los valores que se pueden utilizar en los margenes son los:
+
+    Pixeles (px)
+    auto (automatico)
+
+Se recomienda poner margin: 0; en el body, para que asi se reinicie el margin por defecto, que es 8, de los navegadores.
+
+* Padding
+    Es la propuedad que nos permite generar espacio interno entre el borde y la caja. 
+    Es un shorthand (propiedad abreviada) que controla los 4 lados posibles a los que dar padding.
+
+    * padding-top: margen superior
+    * padding-right: margen derecho
+    * padding-bottom: margen inferior
+    * padding-left: margen izquierdo
+
+    Admite hasta 4 valores que van en el orden de las agujas del reloj.
+
+    4 valores -> padding:top right bottom left
+    3 valores -> padding:top left/right bottom
+    2 valores -> padding:top left/right
+    1 valor -> padding:top/right/bottom/left
+
+Si el objetivo es separar la caja de todos los elementos que lo rodean, se usa margin, si se quiere separar aumentar el tamaño de esta caja es padding.
+
+* Border
+    Es la propiedad que nos permite modificar el borde de la caja.
+    Es un shorthand (propiedad abreviada) que agrupa 3 propiedades.
+
+        * border-width: ancho del borde
+
+            ** border-top-width
+            ** border-right-width
+            ** border-bottom-width
+            ** border-left-width
+
+        * border-style: estilo del borde
+
+            ** border-top-style
+            ** border-right-style
+            ** border-bottom-style
+            ** border-left-style
+            Listado de valores para style:
+
+                - none
+                - hidden
+                - dotted
+                - dashed
+                - solid
+                - double
+                - groove
+                - ridge
+                - inset
+                - outset 
+
+        * border-color: color del borde
+
+            ** border-top-color
+            ** border-right-color
+            ** border-bottom-color
+            ** border-left-color
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+** Box sizing
+    Es la propiedad que nos permite controlar el calculo que hace el navegador a la hora de modificar que hace el navegador a la hora de modificar las propiedades content, padding y border.
+    
+    Los 2 valores que podemos darle son:
+        content-box -> valor por defecto.
+        border-box -> calculo de tamaño del elemento incluyendo el padding y el border.
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+** Border radius: es la propiedad que nos permite redondear vertices de forma independiente.
+
+Es un shorthand que engloba 4 propiedades:
+
+    * border-top-left-radius -> radio del borde superior izquierdo.
+    * border-top-right-radius -> radio del borde superior derecho.
+    * border-bottom-right-radius -> radio del borde inferior derecho.
+    * border-bottom-left-radius -> radio del borde inferior izquierdo.
+
+Si solo recibe un valor, va a dibujar un circulo con ese radio.
+
+** Border radius eliptico. Es igual que el radius, pero para separar los ejes de la elipse se coloca /
+el primer valor es x y el segundo y, quedando asi: x / y
+
+ 

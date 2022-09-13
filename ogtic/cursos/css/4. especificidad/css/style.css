@@ -1,0 +1,34 @@
+body{
+    background-color:#333;
+}
+
+.title#t1{
+    background-color: tomato;
+}
+
+.title{
+    background-color: lightsalmon;
+}
+
+section > p{
+    background-color: red;
+}
+p span{
+    color: yellow;
+}
+
+div p{
+    color: green;
+}
+
+.link{
+    color: inherit;
+}
+
+.item{
+    color: saddlebrown;
+}
+
+.item-extra{
+    color: initial;
+}
