@@ -186,4 +186,90 @@ Si solo recibe un valor, va a dibujar un circulo con ese radio.
 ** Border radius eliptico. Es igual que el radius, pero para separar los ejes de la elipse se coloca /
 el primer valor es x y el segundo y, quedando asi: x / y
 
- 
+ --------------------------------------------------------------------------------------------------------------------------------
+
+** Overflow
+    Es la propiedad que controla que debe hacer la caja cuando su contenido se desborda del contenedor.
+
+    Es un shorthand que engloba overflow-x y overflow-y. 
+
+    Tiene cuatro posibles valores:
+
+        * visible -> es el valor por defecto.
+        * hidden -> el contenido que se desborde no se vera. Si aplicamos esta propuedad en un solo eje, el otro se pondra automaticamente en el valor scroll.
+        * scroll-> apareceran barras de scroll en el  eje asignado. (x, y o ambos)
+        * auto -> apareceran barras de scroll en el caso de que hicieran falta.
+
+Overflow tambien ayuda a los diseños, no solo a arreglar los parrafos.
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+Los margenes verticales se colapsan. No hay trucos para solucionar este problema. Aunque lo que se recomienda es dar margin bottom a los elementos, en vez de darle margin top.
+
+Las formas de solucionar las colisiones entre padres e hijos es utilizar, EN EL PADRE, los siguientes atributos con los siguientes valores:
+
+    - overflow: hidden;
+    - padding-top: 0.1px; No importa el valor.
+    - border-top: 0.1px; No importa el valor.
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+** Display
+
+    Esta propiedad nos sirve para cambiar el contexto de los elementos dentro del navegador.
+
+    Admite varios valores
+
+        * none -> hace que el elemento no se muestre, pero si sigue cargandose.
+        * block -> hace que el elemento sea de bloque
+        * inline -> hace que el elemento sea de linea
+        * inline-block -> hace que el elemento sea de linea pero admite medidas y margenes verticales.
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+** Outline
+
+    Es la propiedad que nos permite dibujar un borde por fuera del modelo de la caja.
+
+    Es un shorthand que engloba:
+
+        * outline-width -> controla el ancho del outline.
+        * outline-style -> controla el estilo del outline.
+        * outline-color -> controla el color del outline.
+
+    Tiene las mismas propiedades y sintaxis que border, pero con algunas diferencias.
+
+         - No ocupa sitio, ya que no forma parte del box-model.
+        - No se puede redondear.
+        - No se puede controlar los lados de forma independiente.
+    
+    Tambien cuenta con la propiedad outline-offset, que nos permite aumentar o disminuir la distancia del outline con respecto a la caja que pertenece.
+    
+--------------------------------------------------------------------------------------------------------------------------------
+
+** Text align 
+    Es la propiedad que nos permite alinear horizontalmente el contenido de un elemento de bloque siempre que el contenido no tenga ancho declarado.
+
+        * text-align: left; -> alinea el contenido a la izquierda.
+        * text-align: right; -> alinea el contenido a la derecha.
+        * text-align: center; -> alinea el contenido al centro.
+        * text-align: justify; -> alinea el contenido de forma justificada. NO ES RECOMENDABLE USARLO.
+
+    El text-align solo centra el contenido. No centra elementos de linea.
+
+    --------------------------------------------------------------------------------------------------------------------------------
+
+    ** Box shadow
+        Se añadio para crear la sombra a los efectos de nuestra caja.
+
+        En esencia lo que hace es crear un clon de la caja respetando la forma de su box-model (ancho, alto, redondez)
+
+        La sintaxis de box-shadow se puede escribir de distintas formas segun lo que queramos conseguir.
+
+        Los valores que le podemos poner son:
+            offset-x -> desplazamiento en x (obligatorio).
+            offset-y -> desplazamiento en y (obligatorio).
+            blur-radius -> desenfoque de la sombra.
+            spread-radius -> expansion de la sombra.
+            color -> el color de la sombra, si no lo especificamos lo heredara del elemento al que pertenece.
+            inset -> determina si la sombra sera interior o exterior.
