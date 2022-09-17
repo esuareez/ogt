@@ -273,3 +273,51 @@ Las formas de solucionar las colisiones entre padres e hijos es utilizar, EN EL 
             spread-radius -> expansion de la sombra.
             color -> el color de la sombra, si no lo especificamos lo heredara del elemento al que pertenece.
             inset -> determina si la sombra sera interior o exterior.
+
+        El inset hace que los valores se inviertan. O sea, si los colores estan a la derecha y abajo SIN inset. Cuando se coloque inset se invertira y se colocara arriba a la izquierda.
+
+        No hay limite respecto al numero de sombras que se pueden colocar.
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+** Position 
+
+    Nos permite posicionar los elementos. Hay algunos conceptos que se deben conocer para entenderlo.
+
+    * Flujo de renderizado -> por norma general los elementos se dibujan de izquierda a derecha y de arriba abajo. El punto 0,0 de los elementos, por norma general, es la esquina superior izquierda.
+
+    * Espacio reservado -> es el espacio que tiene un elemento asignado en el navegador.
+
+    * Elemento posicionado -> esto significa que el elemento tiene la propiedad position con un valor distinto de "static", que es el valor que tiene esta propiedad por defecto.
+
+    * Stackin context -> contexto de apilamiento. Es el orden en el que se apilaran las cajas que se superponen, dentro del mismo contenedor.
+
+    Al posicionar un elemento se habilitan 5 propiedades que podemos utilizar para mover los elementos en los 3 ejes.
+
+        * top -> el elemento se movera desde la parte superior la distancia que le hayamos indicado.
+
+        * right -> el elemento se movera desde la parte derecha la distancia que le hayamos indicado.
+
+        * bottom -> el elemento se movera desde la parte inferior la distancia que le hayamos indicado.
+
+        * left -> el elemento se movera desde la parte izquierda la distancia que le hayamos indicado.
+
+        * z-index -> nos permite mover el elemento en el contexto de apilamiento (eje z)
+
+        *** NOTA: si a un elemento le declaramos la propiedad top y/o left, las propiedades botom y/o right no funcionan.
+
+    Los posibles valores que le podemos dar son:
+
+        * static -> es el valor que tiene por defecto un elemento, con este valor el elemento NO ESTA POSICIONADO y por lo cual no podremos moverlo.
+
+        * relative -> el elemento mantendra su posicion y medidas en el flujo de renderizado y mantendra su espacio reservado. Si lo movemos lo hara usando su posicion en el html como punto de referencia.
+
+        * absolute -> el elemento perdera sus medidas y su espacio reservado. Si lo movemos usara el elemento padre posicionado como referencia. Si no tiene ninguno, usara el elemento html de referencia.
+
+        * fixed -> el elemento perdera sus medidas y su espacio reservado. Si lo movemos usara el elemento html de referencia, y ademas se quedara fijo en esa posicion aunque hagamos scroll.
+
+        *sticky -> es una mezcla de position relative y fixed. 
+        Con este tipo de posicionamiento los valores top, left, bottom y right no sirven para mover el elemento, si no para indicarle en que punto pasara a tener un comportamiento de posicionamiento fixed, hasta llegar a ese punto se comportara como si tuviera relative.
+
+        
+ **** NOTA: con position se le puede dar medida a los elementos de linea, sin necesidad de poner "display".
