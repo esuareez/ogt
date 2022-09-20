@@ -1,0 +1,48 @@
+** JavaScript
+
+Notas del curso de JS.
+
+    ** Sintaxis.
+    
+        - Para declarar una variable se recomienda usar "let" en vez de usar "var".
+        - Para declarar una constante se usa "const".
+    
+    Tipos de datos en JS.
+    
+        - Primitivos:
+            * Números. ( let numero = 10; )
+            * Strings (cadenas). ( let palabra = "hola"; )
+            * Boolean. ( let resp = true; let resp = false; )
+            * Undefined.
+            * Null
+            * Symbol
+            
+
+    En los strings, cuando se utiliza "substrings" no se admiten negativos.
+    En el caso de "slice", cuando indicamos un negativo, hace lo mismo que substring, pero si admite negativos y en ese caso printearía de atrás adelante, dependiendo el numero colocado.
+    
+    * Trim: elimina espacios al principios y al final de la cadena.
+    
+    * startsWith
+    * endsWith
+    * includes
+    * repeat
+    
+------------------------------------------------------------------------------------------
+
+    ** Objeto Math
+    
+    Es un objeto para operaciones matemáticas. Se usa el punto para llamarla, ya que es un objeto.
+    
+    ALgunos métodos:
+    
+        - Math.abs(x). Valor absoluto de X.
+        - Math.ceil(x). Entero más pequeño, mayor o igual que un número. (redondea hacia abajo)
+        - Math.floor(x). Redondea hacia arriba.
+        - Math.pow(x,y). Potencia de x^y
+        - Math.sqrt(x). Devuelve la raíz cuadrada de X.
+        - Math.random(). Número aleatorio entre 0 y 1.
+        - Math.round(x). Redondea x al entero que esté más cerca.
+        - Math.sign(x). Devuelve el signo del número X.
+    
+    
