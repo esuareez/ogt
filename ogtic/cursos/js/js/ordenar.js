@@ -1,6 +1,5 @@
-const numbers = document.getElementById("num");
-const result = document.getElementById("result");
+let numbers = [1,2,3,3,4,4,5];
 
-let n1 = prompt("Introduzca un número: ");
-let n2 = prompt("Introduzca un número: ");
-let n3 = prompt("Introduzca un número: ");
+console.log(numbers);
+console.log(numbers.slice(3,6));
+console.log(numbers);

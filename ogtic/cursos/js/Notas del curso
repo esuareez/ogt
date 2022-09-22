@@ -45,4 +45,32 @@ Notas del curso de JS.
         - Math.round(x). Redondea x al entero que esté más cerca.
         - Math.sign(x). Devuelve el signo del número X.
     
+------------------------------------------------------------------------------------------
+
+** Arrays
+
+    - Eliminar un elemento.
+        
+        * .shift() - elimina el primer elemento del array y devuelve ese elemento.
+        * .pop() - elimina el último elemento de un array y devuelve ese elemento.
+
+    - Añadir elementos.
+
+        * .push(element1, element2) - añade nuevos elementos al final del array y devuelve la nueva longitud.
+
+        * .unshift(element1,element2) - añade nuevos elementos al inicio del array y devuelve la nueva longitud. 
+
+    * .indexOf() - devuelve el primer indice del elemento que coincide con el valor especificado o -1 si no lo encuentra.
     
+    * .lastIndexOf() - devuelve el último índice del elemento que coincida con el valor especificado, o -1 si ninguno es encontrado.
+
+    * .reverse() - invierte el orden de los elementos del array.
+
+    * .join(separador) - devuelve un string con el separador que indiquemos, por defecto son comas.
+
+    * .splice(a,b,items) - cambia el contenido de un array eliminando elementos existentes y/o agregando nuevos elementos.
+        a - índice de inicio. Desde donde se elimina.
+        b - número de elementos. Cantidad que se eliminará, desde el indice indicado.
+        ítems - elementos a añadir, en el caso de que se añadan.
+
+    * .slice(a,b) - extrae elementos de un array desde el indice a hasta el indice b. Si no existe b lo hace desde a hasta el final, si no existe ni a ni b hace una copia del original.
