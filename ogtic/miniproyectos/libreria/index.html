@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+<body>
+    <section>
+        <header class="title">Libro</header>
+    </section>
+    <form id="search">
+        <div class="divisor">
+            <input type="text" name="search" id="looking4" placeholder="Buscar...">
+        </div>
+    </form>
+
+    <form id="form">
+        <div class="divisor">
+            <label for="title">T&iacute;tulo</label>
+            <input type="text" name="title" id="title">
+        </div>
+        <div class="divisor">
+            <label for="author">Autor</label>
+            <input type="text" name="author" id="author">
+        </div>
+        <div class="divisor">
+            <label for="year">A&ntilde;o</label>
+            <input type="number" name="year" id="year">
+        </div>
+        <div class="divisor">
+            <label for="type">Tipo</label>
+            <select name="type" id="type">
+                <option value=""></option>
+                <option value="Aventura">Aventura</option>
+                <option value="Terror">Terror</option>
+                <option value="Fantasia">Fantasia</option>
+            </select>
+        </div>
+        <div>
+            <button type="submit">Enviar</button>
+        </div>
+        <p class="result" id="result"></p>
+
+    </form>
+
+    <div>
+        <button id="view">Ver todos los libros</button>
+    </div>
+
+    <p id="table"></p>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+    <script type="module" src="assets/js/libro.js"></script>
+</body>
+</html>

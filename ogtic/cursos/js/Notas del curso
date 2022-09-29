@@ -74,3 +74,16 @@ Notas del curso de JS.
         ítems - elementos a añadir, en el caso de que se añadan.
 
     * .slice(a,b) - extrae elementos de un array desde el indice a hasta el indice b. Si no existe b lo hace desde a hasta el final, si no existe ni a ni b hace una copia del original.
+
+------------------------------------------------------------------------------------------
+
+** Arrays II
+
+	* .from(iterable) - Convierte en array el elemento iterable.
+
+	* .sort([callback]) - Ordena los elementos de un array alfabeticamente, si le pasamos un
+				callback los ordena en funcion del algoritmo que le pasemos.
+
+	* .forEach(callback(currentValue, [index])) - ejecuta la funcion indicada una vez por cada
+				elemento del array.
+	
